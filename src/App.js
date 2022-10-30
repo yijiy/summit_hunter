@@ -6,53 +6,26 @@ import Footer from './Components/Footer';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Portfolio from './Components/Portfolio';
+import data from './data.json';
 
 class App extends Component {
 
   constructor(props){
     super(props);
-    this.state = {
-      foo: 'bar',
-      summitHunterData: {}
-    };
 
     ReactGA.initialize('UA-110570651-1');
     ReactGA.pageview(window.location.pathname);
 
   }
 
-  getSummitHunterData(){
-    fetch("https://janeevans.github.io/Files/json/summitHunterData.json")
-    // fetch("/summitHunterData.json")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            summitHunterData: result
-          });
-        },
-        (error) => {
-          this.setState({
-            error
-          });
-        }
-      )
-
-
-  }
-
-  componentDidMount(){
-    this.getSummitHunterData();
-  }
-
   render() {
     return (
       <div className="App">
-        <Header data={this.state.summitHunterData.main}/>
-        <About data={this.state.summitHunterData.main}/>
-        <Portfolio data={this.state.summitHunterData.portfolio}/>
-        <Contact data={this.state.summitHunterData.main}/>
-        <Footer data={this.state.summitHunterData.main}/>
+        <Header data={data.main}/>
+        <About data={data.main}/>
+        <Portfolio data={data.portfolio}/>
+        <Contact data={data.main}/>
+        <Footer data={data.main}/>
       </div>
     );
   }
