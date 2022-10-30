@@ -19,8 +19,7 @@ class Footer extends Component {
            </ul>
 
            <ul className="copyright">
-              <li>&copy; Copyright 2019 <a tabIndex="0" href="https://github.com/JaneEvans" rel="noopener noreferrer"  target="_blank"> Jinjin Ge. </a> All Rights Reserved. </li>
-              <li>Design by <a title="Styleshout" href="http://www.styleshout.com/" rel="noopener noreferrer"  target="_blank"> Styleshout </a></li>
+              <li>&copy; Copyright 2022 <a tabIndex="0" href="https://github.com/yijiy/summit_hunter" rel="noopener noreferrer"  target="_blank"> Summit Hunter. </a> All Rights Reserved. </li>
            </ul>
 
         </div>
